@@ -39,10 +39,10 @@ A live demo can be found [Here](PASTE LINK HERE)
 4. FontAwesome
 5. Google Font - [Raleway](https://fonts.google.com/specimen/Raleway)
 6. JQuery
-7. D3
-8. DC
+7. D3 - a JavaScript library for manipulating data, particularly to render our interactive charts and graphs
+8. DC - a JavaScript library for data visualization, here for plotting the charts
 9. Crossfilter
-10. Queue
+10. Queue - an asynchronous helper library for JavaScript
 
 ## Page-Notes
 
