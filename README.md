@@ -37,7 +37,7 @@ A live demo can be found [Here](PASTE LINK HERE)
 2. CSS
 3. Bootstrap (4.3.1)
 4. FontAwesome
-5. Google Font
+5. Google Font - [Raleway](https://fonts.google.com/specimen/Raleway)
 6. JQuery
 7. D3
 8. DC
