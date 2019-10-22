@@ -84,6 +84,7 @@ want to clone the repository. For more information you can review the [GitHub si
 
 ### Acknowledgements
 
+The Sidebar creation tutorial from [Bootstrapious.com](https://bootstrapious.com/p/bootstrap-sidebar) was followed in parts for the styling of the dashboard's sidebar menu.
 
 
 ### Content
