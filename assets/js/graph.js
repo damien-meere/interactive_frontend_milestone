@@ -1,21 +1,34 @@
 //Data visualisation is deferred until the data has been gathered from the requisite location
 queue()
-    .defer(d3.json, "assets/data/dataset1.json")
+    .defer(d3.json, "assets/data/dataset3.json")
     .await(makeGraphs);
 
 
-function makeGraphs(error, transactionsData) {
-    var ndx = crossfilter(transactionsData);
+function makeGraphs(error, trainingData) {
+    var ndx = crossfilter(trainingData);
 
-    //Define Dimensions
-    var yearDim = ndx.dimension(function (d) {
-        return d["year"];
-    });
+    show_year_selector(ndx);
+    showMonthlySpend(ndx);
 
-    //Calculate metrics
-    var yearGroup = yearDim.group();
 
-    selectYear = dc.selectMenu('#year-select')
-        .dimension(yearDim)
-        .group(yearGroup);
+
+    dc.renderAll();
+}
+
+function show_year_selector(ndx){
+    var dim = ndx.dimension(dc.pluck('year'));
+    var group = dim.group();
+
+    dc.selectMenu("#year_selector")
+        .dimension(dim)
+        .group(group);
+}
+
+function showMonthlySpend(ndx){
+
+    console.log("test");
+
+
+
+
 }
