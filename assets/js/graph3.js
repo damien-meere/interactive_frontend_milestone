@@ -17,7 +17,6 @@ function makeGraphs(error, trainingData) {
 function show_year_selector(ndx){
     var dim = ndx.dimension(dc.pluck('year'));
     var group = dim.group();
-
     dc.selectMenu("#year_selector")
         .dimension(dim)
         .group(group);
@@ -44,6 +43,26 @@ function showAnnualSpend(ndx){
 }
 
 function showAnnualTotalHours(ndx){
+
+    var year_dim = ndx.dimension(dc.pluck('year'));
+    var total_hours_per_year = year_dim.group().reduceSum(dc.pluck('month_hours'));
+
+    dc.barChart('#annualHours')
+        .width(500)
+        .height(400)
+        .margins({top: 40, right: 50, bottom: 30, left: 100})
+        .dimension(year_dim)
+        .group(total_hours_per_year)
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Year")
+        .yAxisLabel("Total Hours Training Complete")
+        .yAxis().ticks(4);
+}
+
+
+function showTrainingTypeHours(ndx){
 
     var year_dim = ndx.dimension(dc.pluck('year'));
     var total_hours_per_year = year_dim.group().reduceSum(dc.pluck('month_hours'));
