@@ -21,8 +21,7 @@ This project will present a dashboard of mock training data, presenting a visual
 - [Content](#Content)
 
 ## Demo
-A live demo can be found [Here](PASTE LINK HERE)
-
+A live demo of the dashboard can be found [Here](https://damien-meere.github.io/interactive_frontend_milestone/)
 
 ## Database
 Dataset1.json
