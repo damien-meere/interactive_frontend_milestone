@@ -1,11 +1,4 @@
 [
-    {"year": "2015", "type": "safety", "total": 1571.50},
-    {"year": "2015", "type": "online", "total": 1913.33},
-    {"year": "2015", "type": "BT_Academy", "total": 98.47},
-    {"year": "2015", "type": "INE", "total": 345.20},
-    {"year": "2015", "type": "Internal", "total": 1107},
-    {"year": "2015", "type": "External", "total": 5473},
-    {"year": "2015", "type": "Conference", "total": 336},
     {"year": "2016", "type": "safety", "total": 2568},
     {"year": "2016", "type": "online", "total": 560},
     {"year": "2016", "type": "BT_Academy", "total": 80.5},
