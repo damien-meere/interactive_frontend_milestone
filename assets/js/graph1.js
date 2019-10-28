@@ -9,9 +9,17 @@ function makeGraphs(error, trainingData) {
 
 
     showTrainingTypePie(ndx);
-
+    show_year_selector2(ndx);
 
     dc.renderAll();
+}
+
+function show_year_selector2(ndx){
+    var dim = ndx.dimension(dc.pluck('year'));
+    var group = dim.group();
+    dc.selectMenu("#year_selector2")
+        .dimension(dim)
+        .group(group);
 }
 
 function showTrainingTypePie(ndx){
