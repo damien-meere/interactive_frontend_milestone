@@ -24,10 +24,13 @@ This project will present a dashboard of mock training data, presenting a visual
 A live demo of the dashboard can be found [Here](https://damien-meere.github.io/interactive_frontend_milestone/)
 
 ## Database
-Dataset1.json
+[data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json)
+File consists of 5 key: value pairs. These pairs consist of data amalgamated from the dataset1, dataset2 and dataset3 files, all visible
+witin the [Data Folder](https://github.com/damien-meere/interactive_frontend_milestone/tree/master/assets/data).The excel file accessible
+in the Data Folder also contains the data as laid out before consolidation within the data_consol file.
 
-Dataset2.json
-
+The data_consol folders keys are the year, the month, the type of training, the hours commited to that type of training and the overall spend for that
+type training. The values for these keys contain the useful information that will be broken down and represented in a meaningful way in the dashboard.
 
 ## UX+User-Stories
 
