@@ -10,6 +10,7 @@ function makeGraphs(error, trainingData) {
     show_year_selector(ndx);
     showAnnualSpend(ndx);
     showAnnualTotalHours(ndx);
+    show_type_selector(ndx);
     showTrainingTypePie(ndx);
 
     dc.renderAll();
@@ -60,6 +61,14 @@ function showAnnualTotalHours(ndx){
         .xAxisLabel("Year")
         .yAxisLabel("Total Hours Training Complete")
         .yAxis().ticks(4);
+}
+
+function show_type_selector(ndx){
+    var dim = ndx.dimension(dc.pluck('type'));
+    var group = dim.group();
+    dc.selectMenu("#type_selector")
+        .dimension(dim)
+        .group(group);
 }
 
 function showTrainingTypePie(ndx){
