@@ -60,6 +60,7 @@ function showAnnualTotalHours(ndx){
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Year")
         .yAxisLabel("Total Hours Training Complete")
+        .elasticY(true)
         .yAxis().ticks(4);
 }
 
