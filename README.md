@@ -2,7 +2,8 @@
 Interactive Frontend Development Milestone Project - Code Institute
 
 This project website will highlight my capability to employ the various tools illustrated throughout the Interactive frontend development section of the Code Institute programme.
-This project will present a dashboard of mock training data, presenting a visual representation in interactive charts.
+This project will present a dashboard of mock training data, presenting a visual representation of data within interactive charts. Ultimately, as will be discussed within the UX + User
+Story section, the goal is to make analysis and processing of training data easier to understand, and more actionable by upper management.
 
 ### Table of Contents
 
@@ -25,12 +26,15 @@ A live demo of the dashboard can be found [Here](https://damien-meere.github.io/
 
 ## Database
 [data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json)
-File consists of 5 key: value pairs. These pairs consist of data amalgamated from the dataset1, dataset2 and dataset3 files, all visible
+File consists of 6 key: value pairs. These pairs consist of data amalgamated from the dataset1, dataset2 and dataset3 files, all visible
 witin the [Data Folder](https://github.com/damien-meere/interactive_frontend_milestone/tree/master/assets/data).The excel file accessible
 in the Data Folder also contains the data as laid out before consolidation within the data_consol file.
 
-The data_consol folders keys are the year, the month, the type of training, the hours commited to that type of training and the overall spend for that
-type training. The values for these keys contain the useful information that will be broken down and represented in a meaningful way in the dashboard.
+The data_consol folders keys are the date, the year, the month, the type of training, the hours commited to that type of training and the overall spend for that
+type training. The values for these keys contain the useful information that will be broken down and represented in a meaningful way in the dashboard. The reason for
+the seperation of the date, year and month, is to make the visualisation of the monthly totals easier to work with and visualise.
+
+The data itself is mocked from existing datasets within BT. The original real data will be utilised for deployment on an internal training dashboard.
 
 ## UX+User-Stories
 
@@ -63,8 +67,9 @@ type training. The values for these keys contain the useful information that wil
 
 
 ## Testing
-During initial building of the Dashboard, the requisite data was split across two seperate datasets. Therefore some charts related to different datasets, and as such, were not
-linked on the site.
+During initial building of the Dashboard, the requisite data was split across three seperate datasets. Therefore some charts related to different datasets, and as such, were not
+directly linked wihin the site. I decided to consolidate this data into a single file (using mocked data). This meant that the various downdown menus and charts could be linked,
+making it overall, much easier for someone to understand the data.
 
 
 ## Testing-Unresolved_Bugs
@@ -82,17 +87,11 @@ You can also Clone this Repository to GitHub Desktop, by navigating to the [main
 name, click Clone or download. Click Open in Desktop to clone the repository and open it in GitHub Desktop. Click Choose... and, using Windows Explorer, navigate to a local path where you
 want to clone the repository. For more information you can review the [GitHub site](https://help.github.com/en/articles/cloning-a-repository#cloning-a-repository-to-github-desktop).
 
-### Media
-
-
 
 ### Acknowledgements
 
-The Sidebar creation tutorial from [Bootstrapious.com](https://bootstrapious.com/p/bootstrap-sidebar) was followed in parts for the styling of the dashboard's sidebar menu.
-
 
 ### Content
-
 
 
 **This site is for educational purposes**

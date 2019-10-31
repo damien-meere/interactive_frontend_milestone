@@ -13,7 +13,6 @@ function makeGraphs(error, trainingData) {
         d.date = parseDate(d.date);
     })
 
-
     show_year_selector(ndx);
     showAnnualSpend(ndx);
     showAnnualTotalHours(ndx);
@@ -148,66 +147,33 @@ function compositeHoursByType(ndx){
 
     //var minDate = date_dim.bottom(1)[0].date;
     //var maxDate = date_dim.top(1)[0].date;
-
     // types: safety, online, academy, ine, internal, external, conference
 
-    var safetyHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'safety'){
-            return +d.hours;
-        }else {
+    function hoursByType (type){
+        return function(d){
+            if (d.type === type){
+                return d.hours;
+            }else {
             return 0;
         }
-    });
-    var onlineHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'online'){
-            return +d.hours;
-        }else {
-            return 0;
         }
-    });
-    var academyHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'academy'){
-            return +d.hours;
-        }else {
-            return 0;
-        }
-    });
-    var ineHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'ine'){
-            return +d.hours;
-        }else {
-            return 0;
-        }
-    });
-    var internalHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'internal'){
-            return +d.hours;
-        }else {
-            return 0;
-        }
-    });
-    var externalHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'external'){
-            return +d.hours;
-        }else {
-            return 0;
-        }
-    });
-    var confHoursByMonth = date_dim.group().reduceSum(function(d){
-        if (d.type === 'conference'){
-            return +d.hours;
-        }else {
-            return 0;
-        }
-    });
+    }
+
+    var safetyHoursByMonth = date_dim.group().reduceSum(hoursByType("safety"));
+    var onlineHoursByMonth = date_dim.group().reduceSum(hoursByType("online"));
+    var academyHoursByMonth = date_dim.group().reduceSum(hoursByType("academy"));
+    var ineHoursByMonth = date_dim.group().reduceSum(hoursByType("ine"));
+    var internalHoursByMonth = date_dim.group().reduceSum(hoursByType("internal"));
+    var externalHoursByMonth = date_dim.group().reduceSum(hoursByType("external"));
+    var confHoursByMonth = date_dim.group().reduceSum(hoursByType("conference"));
 
     var compositeChart = dc.compositeChart('#composite-chart');
-
     compositeChart
         .width(900)
         .height(500)
         .dimension(date_dim)
         .x(d3.scale.linear().domain([1,12]))
+        .xAxisLabel("Month")
         .yAxisLabel("Hours Training")
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(10))
         .renderHorizontalGridLines(true)
