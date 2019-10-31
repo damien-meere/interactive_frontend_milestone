@@ -42,6 +42,37 @@ a:focus {
     margin: 40px 0;
 }
 
+.selectors {
+    padding-left: 20px;
+}
+
+.charts {
+    padding-left: 20px;
+}
+
+/*----------------------------------------------------
+    BOX Styling
+-----------------------------------------------------*/
+#box {
+	width:300px;
+	height:60px;
+	margin:10px;
+	padding:10px;
+	background: #6d7fcc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+
+}
+
+.box-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.7em;
+}
+
+
+
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -165,4 +196,13 @@ button[type="submit"] {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .box {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

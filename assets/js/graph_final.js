@@ -72,17 +72,14 @@ function show_type_selector(ndx){
 }
 
 function showTrainingTypePie(ndx){
-
     var type_dim = ndx.dimension(dc.pluck('type'));
     var total_hours_per_type = type_dim.group().reduceSum(dc.pluck('hours'));
-
     dc.pieChart('#pieTest')
-        .height(600)
+        .height(400)
         .radius(200)
         .transitionDuration(1500)
         .dimension(type_dim)
         .group(total_hours_per_type);
-
 
 
 }

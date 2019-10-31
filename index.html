@@ -45,37 +45,46 @@
 
         <!-- Page Content  -->
         <div id="content">
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Sidebar</span>
+                        <span>Navigation</span>
                     </button>
-                    Test
+                    Eolas Training Dashboard
                 </div>
             </nav>
 
             <h2>Eolas Dashboard Test 1</h2>
+            <div class="row">
+                <!-- Year Select -->
+                <div id="box">
+                    <div class="box-title">Select Year</div>
+                    <div id="year_selector"></div>
+                </div>
+                <!-- Type Select -->
+                <div id="box">
+                    <div class="box-title">Select Type</div>
+                    <div id="type_selector"></div>
+                </div>
+                <!-- Reset Charts Button-->
+                <div id="box">
+                    <a class="btn btn-secondary btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset All Charts</a>
 
-            <div class="row">
-                <div class="col-md-offset-5">Select Year - </div>
-                <div class="col-md-offset-5" id="year_selector"></div>
-                <div class="col-md-offset-5">Select Type - </div>
-                <div class="col-md-offset-5" id="type_selector"></div>
+                </div>
             </div>
-            <div class="row">
+            <!-- Charts -->
+            <div class="row charts">
                 <div id="annualSpend"></div>
                 <div id="annualHours"></div>
             </div>
             <div class="line"></div>
             <h3>Training Type Breakdown</h3>
 
-            <div class="row">
+            <div class="row charts">
                 <div id="pieTest"></div>
             </div>
         </div>
-
 
 
     </div>
