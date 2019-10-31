@@ -49,7 +49,7 @@
     {"date": "01/10/2016", "year": "2016", "month":"10", "type":"external", "hours": 1632, "spend": 41710.48},
     {"date": "01/10/2016", "year": "2016", "month":"10", "type":"conference", "hours": 0, "spend": 0},
     {"date": "01/11/2016", "year": "2016", "month":"11", "type":"safety", "hours": 65, "spend": 250},
-    {"date": "01/11/2016", "year": "2016", "month":"11", "type":"online", "hours": 6489, "spend": 0},
+    {"date": "01/11/2016", "year": "2016", "month":"11", "type":"online", "hours": 48, "spend": 0},
     {"date": "01/11/2016", "year": "2016", "month":"11", "type":"academy", "hours": 34, "spend": 0},
     {"date": "01/11/2016", "year": "2016", "month":"11", "type":"ine", "hours": 57.85, "spend": 0},
     {"date": "01/11/2016", "year": "2016", "month":"11", "type":"internal", "hours": 360, "spend": 0},
@@ -293,8 +293,4 @@
     {"date": "01/09/2019", "year": "2019", "month":"9", "type":"internal", "hours": 230, "spend": 0},
     {"date": "01/09/2019", "year": "2019", "month":"9", "type":"external", "hours": 1200, "spend": 25700},
     {"date": "01/09/2019", "year": "2019", "month":"9", "type":"conference", "hours": 44, "spend": 0}
-
-
-
-
 ]

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/dc.min.css" type="text/css" />
 
     <!-- Data Visualisation Libraries - The order of these script calls is important due to internal dependancies-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
@@ -70,20 +71,27 @@
                 <!-- Reset Charts Button-->
                 <div id="box">
                     <a class="btn btn-light btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset All Charts</a>
-
                 </div>
             </div>
             <!-- Charts -->
+            <h3>Annual Breakdown of Hours and Spend</h3>
             <div class="row charts">
                 <div id="annualHours"></div>
                 <div id="annualSpend"></div>
             </div>
             <div class="line"></div>
             <h3>Training Type Breakdown</h3>
-
             <div class="row charts">
                 <div id="pieTest"></div>
+                <div id="composite-chart"></div>
             </div>
+            <div class="line"></div>
+            <h3>Breakdown of Hours and Spend Per Month</h3>
+            <div class="row charts">
+                <div id="hours-per-month"></div>
+                <div id="spend-per-month"></div>
+            </div>
+            <div class="line"></div>
         </div>
 
 
