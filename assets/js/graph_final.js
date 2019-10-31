@@ -31,7 +31,7 @@ function showAnnualSpend(ndx){
     var total_spend_per_year = year_dim.group().reduceSum(dc.pluck('spend'));
 
     dc.barChart('#annualSpend')
-        .width(500)
+        .width(600)
         .height(400)
         .margins({top: 40, right: 50, bottom: 30, left: 100})
         .dimension(year_dim)
@@ -50,7 +50,7 @@ function showAnnualTotalHours(ndx){
     var total_hours_per_year = year_dim.group().reduceSum(dc.pluck('hours'));
 
     dc.barChart('#annualHours')
-        .width(500)
+        .width(600)
         .height(400)
         .margins({top: 40, right: 50, bottom: 30, left: 100})
         .dimension(year_dim)
