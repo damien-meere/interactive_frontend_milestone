@@ -50,28 +50,14 @@ a:focus {
     padding-left: 20px;
 }
 
-/*----------------------------------------------------
-    BOX Styling
------------------------------------------------------*/
-#box {
-	width:300px;
-	height:72px;
-	margin:10px;
-	padding:10px;
-	background: #6d7fcc;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-
+.card-header {
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
-.box-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.1em;
-    font-weight: 700;
-    line-height: 1.7em;
+.intro-card {
+    background-color: #7386D5!important;
 }
-
-
 
 /* ---------------------------------------------------
     SIDEBAR STYLE

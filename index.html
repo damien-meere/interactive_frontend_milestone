@@ -52,60 +52,52 @@
                         <i class="fas fa-align-left"></i>
                         <span>Navigation</span>
                     </button>
-                    Eolas Training Dashboard
+                    Eolas
                 </div>
             </nav>
 
-            <h2>Eolas Dashboard Test 1</h2>
+            <div class="card text-white bg-primary mb-3 text-center intro-card">
+                <div class="card-header">Eolas Training Dashboard</div>
+                <div class="card-body">
+                    <h5 class="card-title">Welcome to the Eolas training Dashboard. The data contained within this dashboard pertains to the
+                    various training activites undertaken within BT Ireland over the last number of years.</h5>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="card col-lg-4 col-md-4 col-sm-12">
+                <div class="card col-md-4 col-sm-12"style="padding-right: 0px; padding-left: 0px;">
                     <div class="card-header">
                         Select Year
                     </div>
                     <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Filter Data to a particular Year</h5>
                         <!-- Card Content-->
                         <div id="year_selector"></div>
                     </div>
                 </div>
-                <div class="card col-lg-4 col-md-4 col-sm-12">
+                <div class="card col-md-4 col-sm-12"style="padding-right: 0px; padding-left: 0px;">
                     <div class="card-header">
                         Select Training Type
                     </div>
                     <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Filter the Data to a particular Training Type</h5>
                         <!-- Card Content-->
                         <div id="type_selector"></div>
                     </div>
                 </div>
-                <div class="card col-lg-4 col-md-4 col-sm-12">
+                <div class="card col-md-4 col-sm-12" style="padding-right: 0px; padding-left: 0px;">
                     <div class="card-header">
                         Reset Data
                     </div>
                     <div class="card-body text-center">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title">Use this button to reset all charts</h5>
                         <!-- Card Content-->
-                        <a class="btn btn-light btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset All Charts</a>
+                        <a class="btn btn-info btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Year Select -->
-                <div id="box">
-                    <div class="box-title">Select Year</div>
-
-                </div>
-                <!-- Type Select -->
-                <div id="box">
-                    <div class="box-title">Select Type</div>
-
-                </div>
-                <!-- Reset Charts Button-->
-                <div id="box">
-
-                </div>
-            </div>
             <!-- Charts -->
             <h3>Annual Breakdown of Hours and Spend</h3>
             <div class="row charts">
