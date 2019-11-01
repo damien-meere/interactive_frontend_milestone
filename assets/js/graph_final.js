@@ -23,14 +23,124 @@ function makeGraphs(error, trainingData) {
     showHoursByMonth(ndx);
     showSpendByMonth (ndx);
     compositeHoursByType(ndx);
+    showTotalHours(ndx);
+    showTotalSpend(ndx);
 
     dc.renderAll();
+
+}
+
+function showAvgSpend(ndx){
+
+
+}
+
+function showAvgHours(ndx){
+
+
+}
+
+function showTotalHours(ndx){
+    var dim = ndx.dimension(dc.pluck('year'));
+    var avgHours = dim.groupAll().reduce(
+        // Add a fact
+        function (p,v){
+            p.count++;
+            p.total += v.hours;
+            p.average = p.total / (p.count/7);
+            return p;
+        },
+        // Remove a Fact
+        function (p,v){
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            } else {
+                p.total -= v.hours;
+                p.average = p.total / (p.count/7);
+            }
+            return p;
+        },
+        // Initialise the Reducer
+        function (){
+            return { count: 0, total: 0, average: 0};
+        }
+    );
+
+    dc.numberDisplay("#totalHoursNum")
+        .valueAccessor(function(d){
+            if (d.count == 0){
+                return 0;
+            }else {
+                console.log("avg="+d.average);
+                console.log("tot="+d.total);
+                console.log("cnt="+d.count);
+                return (d.total);
+            }
+        })
+        .formatNumber(d3.format(",.0f"))
+        .group(avgHours);
+
+}
+
+
+function showTotalSpend(ndx){
+    var dim = ndx.dimension(dc.pluck('year'));
+    var avgHours = dim.groupAll().reduce(
+        // Add a fact
+        function (p,v){
+            p.count++;
+            p.total += v.spend;
+            p.average = p.total / (p.count/7);
+            return p;
+        },
+        // Remove a Fact
+        function (p,v){
+            p.count--;
+            if (p.count == 0) {
+                p.total = 0;
+                p.average = 0;
+            } else {
+                p.total -= v.spend;
+                p.average = p.total / (p.count/7);
+            }
+            return p;
+        },
+        // Initialise the Reducer
+        function (){
+            return { count: 0, total: 0, average: 0};
+        }
+    );
+
+    dc.numberDisplay("#totalSpendNum")
+        .valueAccessor(function(d){
+            if (d.count == 0){
+                return 0;
+            }else {
+                console.log("avg="+d.average);
+                console.log("tot="+d.total);
+                console.log("cnt="+d.count);
+                return (d.total);
+            }
+        })
+        .formatNumber(d3.format("$.,0f"))
+        .group(avgHours);
+
 }
 
 function show_year_selector(ndx){
     var dim = ndx.dimension(dc.pluck('year'));
     var group = dim.group();
     dc.selectMenu("#year_selector")
+        .dimension(dim)
+        .group(group);
+}
+
+function show_type_selector(ndx){
+    var dim = ndx.dimension(dc.pluck('type'));
+    var group = dim.group();
+    dc.selectMenu("#type_selector")
         .dimension(dim)
         .group(group);
 }
@@ -75,14 +185,6 @@ function showAnnualTotalHours(ndx){
         .yAxis().ticks(4);
 }
 
-function show_type_selector(ndx){
-    var dim = ndx.dimension(dc.pluck('type'));
-    var group = dim.group();
-    dc.selectMenu("#type_selector")
-        .dimension(dim)
-        .group(group);
-}
-
 function showTrainingTypePie(ndx){
     var type_dim = ndx.dimension(dc.pluck('type'));
     var total_hours_per_type = type_dim.group().reduceSum(dc.pluck('hours'));
@@ -95,8 +197,6 @@ function showTrainingTypePie(ndx){
         .legend(dc.legend())
         .dimension(type_dim)
         .group(total_hours_per_type);
-
-
 }
 
 function showSpendByMonth (ndx){
@@ -170,7 +270,6 @@ function compositeHoursByType(ndx){
     var internalHoursByMonth = date_dim.group().reduceSum(hoursByType("internal"));
     var externalHoursByMonth = date_dim.group().reduceSum(hoursByType("external"));
     var confHoursByMonth = date_dim.group().reduceSum(hoursByType("conference"));
-
 
     var compositeChart = dc.compositeChart('#composite-chart');
     compositeChart
