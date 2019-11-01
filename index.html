@@ -58,19 +58,52 @@
 
             <h2>Eolas Dashboard Test 1</h2>
             <div class="row">
+                <div class="card col-lg-4 col-md-4 col-sm-12">
+                    <div class="card-header">
+                        Select Year
+                    </div>
+                    <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                        <!-- Card Content-->
+                        <div id="year_selector"></div>
+                    </div>
+                </div>
+                <div class="card col-lg-4 col-md-4 col-sm-12">
+                    <div class="card-header">
+                        Select Training Type
+                    </div>
+                    <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                        <!-- Card Content-->
+                        <div id="type_selector"></div>
+                    </div>
+                </div>
+                <div class="card col-lg-4 col-md-4 col-sm-12">
+                    <div class="card-header">
+                        Reset Data
+                    </div>
+                    <div class="card-body text-center">
+                    <h5 class="card-title"></h5>
+                        <!-- Card Content-->
+                        <a class="btn btn-light btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset All Charts</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
                 <!-- Year Select -->
                 <div id="box">
                     <div class="box-title">Select Year</div>
-                    <div id="year_selector"></div>
+
                 </div>
                 <!-- Type Select -->
                 <div id="box">
                     <div class="box-title">Select Type</div>
-                    <div id="type_selector"></div>
+
                 </div>
                 <!-- Reset Charts Button-->
                 <div id="box">
-                    <a class="btn btn-light btn-lg btn-block" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset All Charts</a>
+
                 </div>
             </div>
             <!-- Charts -->
@@ -78,6 +111,8 @@
             <div class="row charts">
                 <div id="annualHours"></div>
                 <div id="annualSpend"></div>
+                <div id="stackedHours"></div>
+                <div id="stackedSpend"></div>
             </div>
             <div class="line"></div>
             <h3>Training Type Breakdown</h3>

@@ -16,6 +16,8 @@ function makeGraphs(error, trainingData) {
     show_year_selector(ndx);
     showAnnualSpend(ndx);
     showAnnualTotalHours(ndx);
+    showStackedTypeHours(ndx);
+    showStackedTypeSpend(ndx);
     show_type_selector(ndx);
     showTrainingTypePie(ndx);
     showHoursByMonth(ndx);
@@ -112,6 +114,7 @@ function showSpendByMonth (ndx){
         .group(total_spend_per_month)
         .transitionDuration(500)
         .renderHorizontalGridLines(true)
+		.renderVerticalGridLines(true)
         .x(d3.time.scale().domain([minDate, maxDate]))
         .elasticX(true)
         .xAxisLabel("Month")
@@ -134,6 +137,7 @@ function showHoursByMonth (ndx){
         .group(total_hours_per_month)
         .transitionDuration(500)
         .renderHorizontalGridLines(true)
+		.renderVerticalGridLines(true)
         .x(d3.time.scale().domain([minDate, maxDate]))
         .elasticX(true)
         .xAxisLabel("Month")
@@ -167,6 +171,7 @@ function compositeHoursByType(ndx){
     var externalHoursByMonth = date_dim.group().reduceSum(hoursByType("external"));
     var confHoursByMonth = date_dim.group().reduceSum(hoursByType("conference"));
 
+
     var compositeChart = dc.compositeChart('#composite-chart');
     compositeChart
         .width(900)
@@ -175,8 +180,10 @@ function compositeHoursByType(ndx){
         .x(d3.time.scale().domain([minDate, maxDate]))
         .xAxisLabel("Month")
         .yAxisLabel("Hours Training")
-        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(10))
+        .margins({top: 40, right: 50, bottom: 50, left: 140})
+        .legend(dc.legend().x(35).y(20).itemHeight(13).gap(10))
         .renderHorizontalGridLines(true)
+		.renderVerticalGridLines(true)
         .compose([
             dc.lineChart(compositeChart)
                 .colors('green')
@@ -200,7 +207,93 @@ function compositeHoursByType(ndx){
                 .group(confHoursByMonth, 'Conferences'),
         ])
         .brushOn(false);
+}
 
 
+function showStackedTypeHours(ndx){
+    var year_dim = ndx.dimension(dc.pluck('year'));
 
+    // types: safety, online, academy, ine, internal, external, conference
+    function hoursByType (type){
+        return function(d){
+            if (d.type === type){
+                return d.hours;
+            }else {
+            return 0;
+        }
+        }
+    }
+
+    var safetyHours = year_dim.group().reduceSum(hoursByType("safety"));
+    var onlineHours = year_dim.group().reduceSum(hoursByType("online"));
+    var academyHours = year_dim.group().reduceSum(hoursByType("academy"));
+    var ineHours = year_dim.group().reduceSum(hoursByType("ine"));
+    var internalHours = year_dim.group().reduceSum(hoursByType("internal"));
+    var externalHours = year_dim.group().reduceSum(hoursByType("external"));
+    var confHours = year_dim.group().reduceSum(hoursByType("conference"));
+
+    dc.barChart('#stackedHours')
+        .width(600)
+        .height(400)
+        .margins({top: 40, right: 50, bottom: 30, left: 140})
+        .dimension(year_dim)
+        .group(safetyHours, "Safety")
+        .stack(onlineHours, "Online")
+        .stack(academyHours, "Academy")
+        .stack(ineHours, "ine")
+        .stack(externalHours, "External")
+        .stack(internalHours, "Internal")
+        .stack(confHours, "Conference")
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Year")
+        .yAxisLabel("Hours Training Complete By Type")
+        .elasticY(true)
+        .legend(dc.legend().x(35).y(20).itemHeight(13).gap(10))
+        .yAxis().ticks(4);
+}
+
+function showStackedTypeSpend(ndx){
+    var year_dim = ndx.dimension(dc.pluck('year'));
+
+    // types: safety, online, academy, ine, internal, external, conference
+    function spendByType (type){
+        return function(d){
+            if (d.type === type){
+                return d.spend;
+            }else {
+            return 0;
+        }
+        }
+    }
+
+    var safetyHours = year_dim.group().reduceSum(spendByType("safety"));
+    var onlineHours = year_dim.group().reduceSum(spendByType("online"));
+    var academyHours = year_dim.group().reduceSum(spendByType("academy"));
+    var ineHours = year_dim.group().reduceSum(spendByType("ine"));
+    var internalHours = year_dim.group().reduceSum(spendByType("internal"));
+    var externalHours = year_dim.group().reduceSum(spendByType("external"));
+    var confHours = year_dim.group().reduceSum(spendByType("conference"));
+
+    dc.barChart('#stackedSpend')
+        .width(600)
+        .height(400)
+        .margins({top: 40, right: 50, bottom: 30, left: 140})
+        .dimension(year_dim)
+        .group(safetyHours, "Safety")
+        .stack(onlineHours, "Online")
+        .stack(academyHours, "Academy")
+        .stack(ineHours, "ine")
+        .stack(externalHours, "External")
+        .stack(internalHours, "Internal")
+        .stack(confHours, "Conference")
+        .transitionDuration(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Year")
+        .yAxisLabel("Training Spend By Type")
+        .elasticY(true)
+        .legend(dc.legend().x(35).y(20).itemHeight(13).gap(10))
+        .yAxis().ticks(4);
 }
