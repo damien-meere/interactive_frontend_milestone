@@ -54,16 +54,19 @@ The data itself is mocked from existing datasets within BT. The original real da
 
 ## Page-Notes
 
-### General Notes
-
 
 
 ## Current-Features
-
+TODO: include detailed breakdown and description of the various charts:
+1. Total Hours and Total Spend Number Displays
+2. Annual Breakdown of Hours and Spend (Bar Chart & stacked Bar Chart variations)
+3. Pie Chart detailing the various types of training undertaken
+4. Composite Line chart illustrating the breakdown of Hours per training type per month
+5. Breakdown of Total Hours and Spend over the last number of years
 
 
 ## Future-Features
-
+TODO: Detail the storing of the live data within a backend database, as well as the development of a data collection form to the monthly submission of relevant data.
 
 
 ## Testing
