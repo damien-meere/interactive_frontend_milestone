@@ -121,7 +121,11 @@ function showTotalSpend(ndx){
                 console.log("avg="+d.average);
                 console.log("tot="+d.total);
                 console.log("cnt="+d.count);
-                return (d.total);
+                if (d.total<1){
+                    return 0;
+                } else {
+                    return (d.total);
+                }
             }
         })
         .formatNumber(d3.format("$.,0f"))
