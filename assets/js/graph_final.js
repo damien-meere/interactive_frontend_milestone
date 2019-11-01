@@ -97,6 +97,28 @@ function showTrainingTypePie(ndx){
 
 }
 
+function showSpendByMonth (ndx){
+    var date_dim = ndx.dimension(dc.pluck('date'));
+    var total_spend_per_month = date_dim.group().reduceSum(dc.pluck('spend'));
+
+    var minDate = date_dim.bottom(1)[0].date;
+    var maxDate = date_dim.top(1)[0].date;
+
+    dc.lineChart("#spend-per-month")
+        .width(1000)
+        .height(500)
+        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .dimension(date_dim)
+        .group(total_spend_per_month)
+        .transitionDuration(500)
+        .renderHorizontalGridLines(true)
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .elasticX(true)
+        .xAxisLabel("Month")
+        .yAxisLabel("Spend on Training Per Month")
+        .yAxis().ticks(10);
+}
+
 function showHoursByMonth (ndx){
     var date_dim = ndx.dimension(dc.pluck('date'));
     var total_hours_per_month = date_dim.group().reduceSum(dc.pluck('hours'));
@@ -117,36 +139,14 @@ function showHoursByMonth (ndx){
         .xAxisLabel("Month")
         .yAxisLabel("Hours Per Month")
         .elasticY(true)
-        .yAxis().ticks(4);
-}
-
-function showSpendByMonth (ndx){
-    var date_dim = ndx.dimension(dc.pluck('date'));
-    var total_spend_per_month = date_dim.group().reduceSum(dc.pluck('spend'));
-
-    var minDate = date_dim.bottom(1)[0].date;
-    var maxDate = date_dim.top(1)[0].date;
-
-    dc.lineChart("#spend-per-month")
-        .width(1000)
-        .height(500)
-        .margins({top: 10, right: 50, bottom: 30, left: 50})
-        .dimension(date_dim)
-        .group(total_spend_per_month)
-        .transitionDuration(500)
-        .renderHorizontalGridLines(true)
-        .x(d3.time.scale().domain([minDate, maxDate]))
-        .elasticX(true)
-        .xAxisLabel("Month")
-        .yAxisLabel("Spend on Training Per Month")
-        .yAxis().ticks(4);
+        .yAxis().ticks(10);
 }
 
 function compositeHoursByType(ndx){
-    var date_dim = ndx.dimension(dc.pluck('month'));
+    var date_dim = ndx.dimension(dc.pluck('date'));
 
-    //var minDate = date_dim.bottom(1)[0].date;
-    //var maxDate = date_dim.top(1)[0].date;
+    var minDate = date_dim.bottom(1)[0].date;
+    var maxDate = date_dim.top(1)[0].date;
     // types: safety, online, academy, ine, internal, external, conference
 
     function hoursByType (type){
@@ -172,7 +172,7 @@ function compositeHoursByType(ndx){
         .width(900)
         .height(500)
         .dimension(date_dim)
-        .x(d3.scale.linear().domain([1,12]))
+        .x(d3.time.scale().domain([minDate, maxDate]))
         .xAxisLabel("Month")
         .yAxisLabel("Hours Training")
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(10))
