@@ -128,7 +128,7 @@ function showTotalSpend(ndx){
                 }
             }
         })
-        .formatNumber(d3.format("$.,0f"))
+        .formatNumber(d3.format(",.0f"))
         .group(avgHours);
 
 }
