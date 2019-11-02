@@ -60,7 +60,11 @@ a:focus {
 }
 
 .totals {
-    font-size: 2rem!important;
+    font-size: 2.5rem!important;
+}
+
+#annualHours {
+    border:1px solid black;
 }
 
 /* ---------------------------------------------------

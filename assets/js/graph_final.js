@@ -30,16 +30,6 @@ function makeGraphs(error, trainingData) {
 
 }
 
-function showAvgSpend(ndx){
-
-
-}
-
-function showAvgHours(ndx){
-
-
-}
-
 function showTotalHours(ndx){
     var dim = ndx.dimension(dc.pluck('year'));
     var avgHours = dim.groupAll().reduce(
@@ -81,7 +71,6 @@ function showTotalHours(ndx){
         })
         .formatNumber(d3.format(",.0f"))
         .group(avgHours);
-
 }
 
 
