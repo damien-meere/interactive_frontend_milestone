@@ -64,20 +64,22 @@ TODO: include detailed breakdown and description of the various charts:
 4. Composite Line chart illustrating the breakdown of Hours per training type per month
 5. Breakdown of Total Hours and Spend over the last number of years
 
-
 ## Future-Features
-TODO: Detail the storing of the live data within a backend database, as well as the development of a data collection form to the monthly submission of relevant data.
+In it's current form, the dashboard draws it's data from a static dataset - [data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json).
+In the next iteration of the project, the dashbaord will draw data from a live backend database. Therefore the next iteration of the dashboard will also contain data
+collection portals to allow for the inputting of up to date data.
 
+In it's current form, the dashboard is exclusively for desktop consumption. In the next iteration of the project, I will be implementing mobile first principles,
+and building responsive charts that willa accomodate for varying screen sizes.
 
 ## Testing
-During initial building of the Dashboard, the requisite data was split across three seperate datasets. Therefore some charts related to different datasets, and as such, were not
-directly linked wihin the site. I decided to consolidate this data into a single file (using mocked data). This meant that the various downdown menus and charts could be linked,
-making it overall, much easier for someone to understand the data.
-
+During initial building of the Dashboard, the requisite data was split across three seperate datasets. Therefore some charts related to different datasets, and as such,
+were not directly linked wihin the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data). This meant that the
+data refinement dropdown menus and charts could be linked, making it overall, much easier for someone to understand the data, in line with the stated user stories.
 
 ## Testing-Unresolved_Bugs
-
-
+During the site build, a number of issues arose from the lack of responsivness from the dc charts. On smaller screens, the charts maintain their size and require
+side scrolling, which is less than ideal. As highlighed in the Future-Features section, this will be addressed in future iterations of this project.
 
 ## Deployment
 This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch.
