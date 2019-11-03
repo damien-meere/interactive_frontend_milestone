@@ -51,6 +51,7 @@ The data itself is mocked from existing datasets within BT. The original real da
 8. DC - a JavaScript library for data visualization, here for plotting the charts
 9. Crossfilter
 10. Queue - an asynchronous helper library for JavaScript
+11. Intro.js (2.9.3) - Step-Bt-Step introductory tour through the dashboard for first time users.
 
 ## Page-Notes
 This site is a simple two page structure with one page to house the data visualisations in a [dashboard](https://damien-meere.github.io/interactive_frontend_milestone/).
@@ -103,7 +104,8 @@ name, click Clone or download. Click Open in Desktop to clone the repository and
 want to clone the repository. For more information you can review the [GitHub site](https://help.github.com/en/articles/cloning-a-repository#cloning-a-repository-to-github-desktop).
 
 ### Acknowledgements
-
+[Intro.js](https://introjs.com/) is an open-source utility the facilitates a step-by-step guide through a site. In this case, the utility is employed to guide first
+time users through the various charts,and provide a brief description of the chart context.
 
 ### Content
 All data contained within this site is mocked up, so as to give a view of data visualisation. This dashboard will be presented internally within BT Ireland with the
