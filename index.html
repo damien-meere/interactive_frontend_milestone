@@ -55,13 +55,12 @@
                     Eolas
                 </div>
             </nav>
-
             <div class="card text-white bg-primary mb-3 text-center intro-card">
                 <div class="card-header">Eolas Training Dashboard</div>
                 <div class="card-body">
                     <h5 class="card-title">Welcome to the Eolas training Dashboard. The data contained within this dashboard pertains to the
-                    various training activites undertaken within BT Ireland over the last number of years.</h5>
-                    <p class="card-text"></p>
+                    various training activites undertaken within BT Ireland over the last number of years. Within each chart, you can click on an
+                    individual year, or training type, to isloate that data. The refinement of the data is reflected across all charts within the dashboard.</h5>
                 </div>
             </div>
 
@@ -119,26 +118,95 @@
             </div>
             <!-- Charts -->
             <h3 class ="text-center">Annual Breakdown of Hours and Spend</h3>
+            <!-- Total Charts -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Hours Training Completed by Year</h5>
+                            <p class="card-text">This chart illustrates the total hours training that has been completed each year</p>
+                            <div id="annualHours"></div>
 
-
-
-            <div class="row charts" >
-                <div id="annualHours"></div>
-                <div id="annualSpend"></div>
-                <div id="stackedHours"></div>
-                <div id="stackedSpend"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Training Spend</h5>
+                            <p class="card-text">This chart illustrates the total cost of all training (in Eur €) each year.</p>
+                            <div id="annualSpend"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Type Breakdown -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Hours by Type Breakdown</h5>
+                            <p class="card-text">This stacked bar chart illustrates the breakdown of hours completed by type.</p>
+                            <div id="stackedHours"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Training Spend by Type</h5>
+                            <p class="card-text">This stacked bar chart illustrates the breakdown of spend by type (€).</p>
+                            <div id="stackedSpend"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="line"></div>
-            <h3>Training Type Breakdown</h3>
-            <div class="row charts">
-                <div id="pieTest"></div>
-                <div id="composite-chart"></div>
+            <!-- Pie Chart & Line Chart -Type Breakdown -->
+            <h3 class ="text-center">Training Type Breakdown</h3>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Type Breakdown</h5>
+                        <p class="card-text">This pie chart represents a split of hours per training type for a given time period. Click on a type to isolate the data.</p>
+                        <div id="pieTest"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Hours By Type Per Month</h5>
+                        <p class="card-text">This chart represents the progression of hours completed for each training type per Month. Hang your mouse over
+                        individual points to view the total hours value.</p>
+                        <div id="composite-chart"></div>
+                    </div>
+                    </div>
+                </div>
             </div>
+            <!-- Line Chart Totals -->
             <div class="line"></div>
-            <h3>Breakdown of Hours and Spend Per Month</h3>
-            <div class="row charts">
-                <div id="hours-per-month"></div>
-                <div id="spend-per-month"></div>
+            <h3 class="text-center">Breakdown of Hours and Spend Per Month</h3>
+            <div class="row text-center">
+                <div class="col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Hours Per Month</h5>
+                            <p class="card-text">This chart presents a view of the total .</p>
+                            <div id="hours-per-month"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Spend Per Month</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div id="spend-per-month"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="line"></div>
         </div>

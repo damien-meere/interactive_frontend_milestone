@@ -182,9 +182,9 @@ function showTrainingTypePie(ndx){
     var type_dim = ndx.dimension(dc.pluck('type'));
     var total_hours_per_type = type_dim.group().reduceSum(dc.pluck('hours'));
     dc.pieChart('#pieTest')
-        .height(400)
-        .radius(200)
-        .width(400)
+        .height(500)
+        .radius(250)
+        .width(500)
         .innerRadius(80)
         .transitionDuration(1500)
         .legend(dc.legend())
@@ -212,7 +212,7 @@ function showSpendByMonth (ndx){
         .elasticX(true)
         .xAxisLabel("Month")
         .yAxisLabel("Spend on Training Per Month")
-        .yAxis().ticks(10);
+        .yAxis().ticks(15);
 }
 
 function showHoursByMonth (ndx){
@@ -236,7 +236,7 @@ function showHoursByMonth (ndx){
         .xAxisLabel("Month")
         .yAxisLabel("Hours Per Month")
         .elasticY(true)
-        .yAxis().ticks(10);
+        .yAxis().ticks(15);
 }
 
 function compositeHoursByType(ndx){
