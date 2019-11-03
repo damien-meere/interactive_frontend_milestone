@@ -53,8 +53,11 @@ The data itself is mocked from existing datasets within BT. The original real da
 10. Queue - an asynchronous helper library for JavaScript
 
 ## Page-Notes
+This site is a simple two page structure with one page to house the data visualisations in a [dashboard](https://damien-meere.github.io/interactive_frontend_milestone/).
+The other page houses a [contact form](https://damien-meere.github.io/interactive_frontend_milestone/contact.html), where site users can submit any queries they might
+have pertaining to the data contained within the dashboard.
 
-
+I've implemented a sidebar navigation on this site to allow for further additions to the site, such as data collection portals, as discussed in the Future Features section.
 
 ## Current-Features
 TODO: include detailed breakdown and description of the various charts:
@@ -77,6 +80,13 @@ During initial building of the Dashboard, the requisite data was split across th
 were not directly linked wihin the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data). This meant that the
 data refinement dropdown menus and charts could be linked, making it overall, much easier for someone to understand the data, in line with the stated user stories.
 
+
+All CSS and HTML files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
+checked the markup validity of Web documents against the w3c standards.
+
+All links on each page were individually tested to ensure they navigated to the requisite page.
+
+
 ## Testing-Unresolved_Bugs
 During the site build, a number of issues arose from the lack of responsivness from the dc charts. On smaller screens, the charts maintain their size and require
 side scrolling, which is less than ideal. As highlighed in the Future-Features section, this will be addressed in future iterations of this project.
@@ -92,11 +102,11 @@ You can also Clone this Repository to GitHub Desktop, by navigating to the [main
 name, click Clone or download. Click Open in Desktop to clone the repository and open it in GitHub Desktop. Click Choose... and, using Windows Explorer, navigate to a local path where you
 want to clone the repository. For more information you can review the [GitHub site](https://help.github.com/en/articles/cloning-a-repository#cloning-a-repository-to-github-desktop).
 
-
 ### Acknowledgements
 
 
 ### Content
-
+All data contained within this site is mocked up, so as to give a view of data visualisation. This dashboard will be presented internally within BT Ireland with the
+correct data in place.
 
 **This site is for educational purposes**
