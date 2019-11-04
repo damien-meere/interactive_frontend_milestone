@@ -28,10 +28,15 @@ A live demo of the dashboard can be found [Here](https://damien-meere.github.io/
 [data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json)
 File consists of 6 key: value pairs. These pairs consist of data amalgamated from the dataset1, dataset2 and dataset3 files, all visible
 within the [Data Folder](https://github.com/damien-meere/interactive_frontend_milestone/tree/master/assets/data).The excel file accessible
-in the Data Folder also contains the data as laid out before consolidation within the data_consol file.
+in the Data Folder also contains the data as laid out before consolidation within the data_consol file. The data_consol folders keys are as follows:
+1. the date,
+2. the year,
+3. the month,
+4. the type of training,
+5. the hours committed to that type of training and
+6. the overall spend for that type training.
 
-The data_consol folders keys are the date, the year, the month, the type of training, the hours committed to that type of training and the overall spend for that
-type training. The values for these keys contain the useful information that will be broken down and represented in a meaningful way in the dashboard. The reason for
+The values for these keys contain the useful information that will be broken down and represented in a meaningful way in the dashboard. The reason for
 the separation of the date, year and month, is to make the visualisation of the monthly totals easier to work with and visualise.
 
 The data itself is mocked from existing datasets within BT. The original real data will be utilised for deployment on an internal training dashboard.
