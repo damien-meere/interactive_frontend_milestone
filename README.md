@@ -11,7 +11,7 @@ Story section, the goal is to make analysis and processing of training data easi
 - [Database](#Database)
 - [UX + User Stories](#UX+User-Stories)
 - [Technologies](#Technologies)
-- [Page Notes](#Page-Notes)
+- [Site Notes](#Site-Notes)
 - [Current Features](#Current-Features)
 - [Future Features](#Future-Features)
 - [Testing](#Testing)
@@ -53,7 +53,7 @@ The data itself is mocked from existing datasets within BT. The original real da
 10. Queue - an asynchronous helper library for JavaScript
 11. Intro.js (2.9.3) - Step-Bt-Step introductory tour through the dashboard for first time users.
 
-## Page-Notes
+## Site-Notes
 This site is a simple two page structure with one page to house the data visualisations in a [dashboard](https://damien-meere.github.io/interactive_frontend_milestone/).
 The other page houses a [contact form](https://damien-meere.github.io/interactive_frontend_milestone/contact.html), where site users can submit any queries they might
 have pertaining to the data contained within the dashboard.
@@ -61,12 +61,19 @@ have pertaining to the data contained within the dashboard.
 I've implemented a sidebar navigation on this site to allow for further additions to the site, such as data collection portals, as discussed in the Future Features section.
 
 ## Current-Features
-TODO: include detailed breakdown and description of the various charts:
+The purpose of this dashboard, as outlined in the UX+User-Stories section, is to breakdown and visualise the training data for all training committed and finances spent
+on training throughout the last number of years. The following is discription of year chart used and it's significance:
+
 1. Total Hours and Total Spend Number Displays
+![Number Displays](assets/images/totals_number_disp.jpg)
+
 2. Annual Breakdown of Hours and Spend (Bar Chart & stacked Bar Chart variations)
 3. Pie Chart detailing the various types of training undertaken
 4. Composite Line chart illustrating the breakdown of Hours per training type per month
 5. Breakdown of Total Hours and Spend over the last number of years
+
+An introductory tour utility has been implemented within the dashboard to guide first time users through the various sections of the dashboard, and provide a brief
+introduction to each chart type. [Intro.js](https://introjs.com/) is utilised to support this functionality.
 
 ## Future-Features
 In it's current form, the dashboard draws it's data from a static dataset - [data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json).

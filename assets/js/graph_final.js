@@ -183,8 +183,8 @@ function showTrainingTypePie(ndx){
     var total_hours_per_type = type_dim.group().reduceSum(dc.pluck('hours'));
     dc.pieChart('#pieTest')
         .height(500)
-        .radius(250)
-        .width(500)
+        .radius(200)
+        .width(400)
         .innerRadius(80)
         .transitionDuration(1500)
         .legend(dc.legend())
