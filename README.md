@@ -42,7 +42,17 @@ the separation of the date, year and month, is to make the visualisation of the 
 The data itself is mocked from existing datasets within BT. The original real data will be utilised for deployment on an internal training dashboard.
 
 ## UX+User-Stories
+My goal in building this dashboard was to make it easier to observe data related to training activites within BT Ireland, and ultimately draw meaning from this data in a efficient
+manner. Therefore I ensured that the site would be easy to navigate and any charts would be easy to understand. Given this dashboard is to be employed within BT Ireland to present
+real data, in designing this site, I started with a number of user stories:
 
+1. Management looking to quickly determine the progress of training practices across large timeframes
+2. Training Lead looking to monitor training closely, and attempt to plan for the year ahead by identifying trends in data (busy/slow periods, when most money is spent etc.)
+
+From these user-stories it was clear that quick and easy access to information would be key to ensuring that users could make the most efficient use of the dashboard. I needed to
+make sure that users could quickly navigate the site, and locate any information they required with minimal prompting. As illustrated by the images in the wireframe folder,
+particularly the index_design images, even from the early designs, I wanted to ensure the site was easy-to-navigate and minimalist to ensure the user was able to quickly assimilate
+the information required. Also within this wireframe folder is a number of designs for both the navbar (full and collapsed) and footer, as well as designs for the course booking modals so prevalent throughout the site. The Technical training page design is also illustrated here, with this scrollable panelled format being repeated throughout the site in the other pages.
 
 
 ## Technologies
