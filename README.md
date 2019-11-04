@@ -73,18 +73,26 @@ be of significant interest to management looking to make swift observations of t
 ![Annual Totals](assets/images/annual_totals.jpg)
 ![Type Breakdown Totals](assets/images/type_breakdown_annual.jpg)
 These two sets of chats provide a site user with a quick view of the totals per annual period for the training hours and training spend. The first two charts just
-give the absolute total for both of these datasets. While the latter two present a similar view with all types broken out. These charts can be further filter depending on the user choices within the dropdown menus, or through interations
-with other charts. But again, the purpose of these charts is to make quick comparisons or prograss across 12 month periods.
+give the absolute total for both of these datasets. While the latter two present a similar view with all types broken out. These charts can be further filter depending
+on the user choices within the dropdown menus, or through interations with other charts. But again, the purpose of these charts is to make quick comparisons or prograss
+across 12 month periods.
 
 3. Pie Chart detailing the various types of training undertaken
 ![Pie Display](assets/images/type_breakdown_monthly.jpg)
+This chart presents another view of the training type breakdown, again depending on the chosen time period (Through interactions with other charts). By selecting an
+individual slice from the pie chart, you can also filter taht data in the other charts and view additional detail about that specific training type.
 
 4. Composite Line chart illustrating the breakdown of Hours per training type per month
 ![Composite Line](assets/images/type_breakdown_monthly_compline.jpg)
+This composite line chart displays the progression of the hours completed for various training types, by date. From this chart we can compare the vaioys training types
+over a long period of time, and compare them aganst each other over time.
 
 5. Breakdown of Total Hours and Spend over the last number of years
 ![Hours By Month](assets/images/total_hours_month.jpg)
 ![Spend By Month](assets/images/total_spend_month.jpg)
+These two line charts present the total hours committed and the total spend over time. Within these charts, the dashboard user can also select a specific time period
+to view records, rather than just the full year. From here again, all the charts in the dashboard can be filtered down to a much more specific time, allowing the user
+to make more specific determinations about the training.
 
 An introductory tour utility has been implemented within the dashboard to guide first time users through the various sections of the dashboard, and provide a brief
 introduction to each chart type. [Intro.js](https://introjs.com/) is utilised to support this functionality.
@@ -115,7 +123,7 @@ side scrolling, which is less than ideal. As highlighed in the Future-Features s
 
 ## Deployment
 This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch.
-In order for the site to deploy correctly on GitHub pages, the landing page is named `index.html`, and the current live site can be accessed [HERE](PASTE LINK HERE)
+In order for the site to deploy correctly on GitHub pages, the landing page is named `index.html`, and the current live site can be accessed [HERE](https://damien-meere.github.io/interactive_frontend_milestone/).
 
 To run locally, you can clone this repository directly into the editor of your choice by pasting `git clone https://github.com/damien-meere/interactive_frontend_milestone.git` into your terminal.
 To cut ties with this GitHub repository, type `git remote rm origin` into the terminal.
