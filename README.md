@@ -66,7 +66,7 @@ on training throughout the last number of years. The following is discription of
 
 1. Total Hours and Total Spend Number Displays
 ![Number Displays](assets/images/totals_number_disp.jpg)
-This is teh headline visual on the site, as this gives the total horus training committed, as well as the total spend on training. Again, both of these figures would
+This is the headline visual on the site, as this gives the total horus training committed, as well as the total spend on training. Again, both of these figures would
 be of significant interest to management looking to make swift observations of the training data.
 
 2. Annual Breakdown of Hours and Spend (Bar Chart & stacked Bar Chart variations)
@@ -111,12 +111,14 @@ During initial building of the Dashboard, the requisite data was split across th
 were not directly linked wihin the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data). This meant that the
 data refinement dropdown menus and charts could be linked, making it overall, much easier for someone to understand the data, in line with the stated user stories.
 
-
 All CSS and HTML files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
 checked the markup validity of Web documents against the w3c standards.
 
 All links on each page were individually tested to ensure they navigated to the requisite page.
 
+This site was tested across multiple browsers (Chrome, Safari, Firefox), and on multiple devices (Samsung Galaxy S8/S9/S10, Samsung Galaxy Tab, Apple iPad, iPhone 6/7/8)
+to ensure compatibility and responsiveness. As detailed in the next section, the display of charts is somewhat unresponsive on smaller screens, and the current iteration
+is suited to desktop presentation.
 
 ## Testing-Unresolved_Bugs
 During the site build, a number of issues arose from the lack of responsivness from the dc charts. On smaller screens, the charts maintain their size and require
