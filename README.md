@@ -66,11 +66,25 @@ on training throughout the last number of years. The following is discription of
 
 1. Total Hours and Total Spend Number Displays
 ![Number Displays](assets/images/totals_number_disp.jpg)
+This is teh headline visual on the site, as this gives the total horus training committed, as well as the total spend on training. Again, both of these figures would
+be of significant interest to management looking to make swift observations of the training data.
 
 2. Annual Breakdown of Hours and Spend (Bar Chart & stacked Bar Chart variations)
+![Annual Totals](assets/images/annual_totals.jpg)
+![Type Breakdown Totals](assets/images/type_breakdown_annual.jpg)
+These two sets of chats provide a site user with a quick view of the totals per annual period for the training hours and training spend. The first two charts just
+give the absolute total for both of these datasets. While the latter two present a similar view with all types broken out. These charts can be further filter depending on the user choices within the dropdown menus, or through interations
+with other charts. But again, the purpose of these charts is to make quick comparisons or prograss across 12 month periods.
+
 3. Pie Chart detailing the various types of training undertaken
+![Pie Display](assets/images/type_breakdown_monthly.jpg)
+
 4. Composite Line chart illustrating the breakdown of Hours per training type per month
+![Composite Line](assets/images/type_breakdown_monthly_compline.jpg)
+
 5. Breakdown of Total Hours and Spend over the last number of years
+![Hours By Month](assets/images/total_hours_month.jpg)
+![Spend By Month](assets/images/total_spend_month.jpg)
 
 An introductory tour utility has been implemented within the dashboard to guide first time users through the various sections of the dashboard, and provide a brief
 introduction to each chart type. [Intro.js](https://introjs.com/) is utilised to support this functionality.
