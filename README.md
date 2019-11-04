@@ -79,6 +79,7 @@ across 12 month periods.
 
 3. Pie Chart detailing the various types of training undertaken
 ![Pie Display](assets/images/type_breakdown_monthly.jpg)
+
 This chart presents another view of the training type breakdown, again depending on the chosen time period (Through interactions with other charts). By selecting an
 individual slice from the pie chart, you can also filter taht data in the other charts and view additional detail about that specific training type.
 
