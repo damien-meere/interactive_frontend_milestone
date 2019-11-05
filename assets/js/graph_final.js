@@ -11,7 +11,7 @@ function makeGraphs(error, trainingData) {
     var parseDate = d3.time.format("%d/%m/%Y").parse;
     trainingData.forEach(function(d){
         d.date = parseDate(d.date);
-    })
+    });
 
     // Function calls ordered as per their appearence in the dashboard
     show_year_selector(ndx);
@@ -191,7 +191,7 @@ function showStackedTypeHours(ndx){
             }else {
                 return 0;
             }
-        }
+        };
     }
     // Gather a dimension for each training type
     var safetyHours = year_dim.group().reduceSum(hoursByType("safety"));
@@ -235,7 +235,7 @@ function showStackedTypeSpend(ndx){
             }else {
                 return 0;
             }
-        }
+        };
     }
     // Gather a dimension for each training type
     var safetyHours = year_dim.group().reduceSum(spendByType("safety"));
@@ -300,7 +300,7 @@ function compositeHoursByType(ndx){
             }else {
                 return 0;
             }
-        }
+        };
     }
     // Gather a dimension for each training type
     var safetyHoursByMonth = date_dim.group().reduceSum(hoursByType("safety"));

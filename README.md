@@ -146,16 +146,18 @@ of the specific teams undertaking training, and which teams are accounting for t
 
 ## Testing
 During initial building of the Dashboard, the requisite data was split across three separate datasets. Therefore some charts related to different datasets, and as such,
-were not directly linked within the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data). This meant that the
-data refinement dropdown menus and charts could be linked, making it overall, much easier for someone to understand the data, in line with the stated user stories.
+were not directly linked within the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data) The [data_consolidation.jpg](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/wireframes/data_consolidation.jpg)
+image shows the early planning for this consolidation of the data into a single dataset. This process meant that the data refinement dropdown menus and charts could be linked,
+making it overall, much easier for someone to analyse and understand the data, in line with the stated user stories.
 
 As highlighted previously, within the Contact page, the [EMailJS](https://www.emailjs.com/) is employed to facilitate the sending of email requests from the Contact Form.
 However, as this demo site is housed within GitHub pages for submission to the Code Institute, this functionality in not available. GitHub pages are static, and as such do not
 allow the form 'POST'method. However, once housed within another server environment, this functionality will be restored and enable visitors to submit queries regarding the data
 visualised within the dashboard.
 
-All CSS and HTML files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
-checked the markup validity of Web documents against the w3c standards.
+All CSS, HTML and Javascript files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
+checked the markup validity of Web documents against the w3c standards. the [JSHint](https://jshint.com/) utility was used to check for errors and potential problems in the
+JavaScript code.
 
 All links on each page were individually tested to ensure they navigated to the requisite page.
 
@@ -177,6 +179,11 @@ To cut ties with this GitHub repository, type `git remote rm origin` into the te
 You can also Clone this Repository to GitHub Desktop, by navigating to the [main page](https://github.com/damien-meere/interactive_frontend_milestone) of the repository on GitHub, under the repository
 name, click Clone or download. Click Open in Desktop to clone the repository and open it in GitHub Desktop. Click Choose... and, using Windows Explorer, navigate to a local path where you
 want to clone the repository. For more information you can review the [GitHub site](https://help.github.com/en/articles/cloning-a-repository#cloning-a-repository-to-github-desktop).
+
+## Internal Deployment
+This dashboard will be deployed internally within the company Intranet, with the code being housed within a SharePoint site. The code will be updated to draw from real data files
+as opposed to the mocked up data presented on the GitHub page. As detailed in the Future Features section, the next iteration of this dashboard will a live backend database.
+Therefore the next iteration of the dashboard will also contain data collection portals to allow for the inputting of up to date data.
 
 ### Acknowledgements
 [Intro.js](https://introjs.com/) is an open-source utility the facilitates a step-by-step guide through a site. In this case, the utility is employed to guide first
