@@ -49,17 +49,23 @@ manner. Therefore I ensured that the site would be easy to navigate and any char
 real data, in designing this site, I started with a number of user stories:
 
 1. Management looking to quickly determine the progress of training practices across large timeframes
+This dashboard is designed to distil training data from the last number of years into a format that can be easily assimilated. Those in management positions within the company
+often need to be able to examine high-level summaries of training activities within the company. In the past, this has taken for form of static images of graphs built in tools
+such as MS Excel. However, with a more dynamic tool such as this dashboard, they can easily draw out the requisite information, particularly around total spend and draw their
+own conclusions.
+
 2. Training Lead looking to monitor training closely, and attempt to plan for the year ahead by identifying trends in data (busy/slow periods, when most money is spent etc.)
+The training manager is required to examine training data to plan for the year ahead. They must be able to quickly compare hours committed throughout the year, examine spend
+throughout the year, and determine what types of training account for both. The training manager needs to be able to examine trends and make determinations around when best to
+schedule certain programmes, when to make finances available for certain training and when to make instructors available for training.
 
 From these user-stories it was clear that quick and easy access to information would be key to ensuring that users could make the most efficient use of the dashboard. I needed to
 make sure that users could quickly navigate the site, and locate any information they required with minimal prompting. As illustrated by the images in the [Wireframes folder](https://github.com/damien-meere/interactive_frontend_milestone/tree/master/wireframes),
 particularly the [early_index_design.jpg](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/wireframes/early_index_design.jpg) and
 [index_design.jpg](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/wireframes/index_design.jpg) images, even from the early designs, I wanted to ensure the
-site was easy-to-navigate and minimalist to ensure the user was able to quickly locate and assimilate the information they required. Also within this wireframe folder is the initial
+site was easy-to-navigate and minimalist to ensure the user was able to quickly locate and assimilate the information they required. This philosophy is also visible from the initial
 design for the sidebar navigation - see [navigation_design.jpg](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/wireframes/navigation_design.jpg).
 
-TODO: Management Site usage
-TODO: Training Manager Site usage
 
 ## Technologies
 1. HTML
