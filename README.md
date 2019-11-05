@@ -148,6 +148,11 @@ During initial building of the Dashboard, the requisite data was split across th
 were not directly linked within the site. In the early phase of the project I decided to consolidate this data into a single file (using mocked data). This meant that the
 data refinement dropdown menus and charts could be linked, making it overall, much easier for someone to understand the data, in line with the stated user stories.
 
+As highlighted previously, within the Contact page, the [EMailJS](https://www.emailjs.com/) is employed to facilitate the sending of email requests from the Contact Form.
+However, as this demo site is housed within GitHub pages for submission to the Code Institute, this functionality in not available. GitHub pages are static, and as such do not
+allow the form 'POST'method. However, once housed within another server environment, this functionality will be restored and enable visitors to submit queries regarding the data
+visualised within the dashboard.
+
 All CSS and HTML files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
 checked the markup validity of Web documents against the w3c standards.
 
