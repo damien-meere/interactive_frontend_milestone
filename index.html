@@ -12,9 +12,9 @@
     <!--Requisite Structural Sytlesheets - Bootstrap, Fontawesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.min.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/introjs.css" type="text/css" />
 
     <!-- Data Visualisation Libraries - The order of these script calls is important due to internal dependancies-->
@@ -23,7 +23,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <script src="assets/js/graph_final.js"></script>
-
 </head>
 
 <body>
@@ -43,8 +42,7 @@
                 </li>
             </ul>
         </nav>
-
-        <!-- Page Content  -->
+        <!-- Top Navbar -->
         <div id="content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -55,6 +53,7 @@
                     Eolas
                 </div>
             </nav>
+            <!-- Page Content -->
             <div class="card text-white bg-primary mb-3 text-center intro-card">
                 <div class="card-header">Eolas Training Dashboard</div>
                 <div class="card-body">
@@ -72,7 +71,7 @@
                     <div class="card-header">
                         Select Year
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body">
                     <h5 class="card-title">Filter Data to a particular Year</h5>
                         <!-- Card Content-->
                         <div id="year_selector" data-step="1" data-intro="Select a year to filter the data to the requisite year"></div>

@@ -357,7 +357,7 @@ function showSpendByMonth (ndx){
     var minDate = date_dim.bottom(1)[0].date;
     var maxDate = date_dim.top(1)[0].date;
     dc.lineChart("#spend-per-month")
-        .width(1000)
+        .width(1200)
         .height(500)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(date_dim)
@@ -367,6 +367,7 @@ function showSpendByMonth (ndx){
 		.renderVerticalGridLines(true)
         .x(d3.time.scale().domain([minDate, maxDate]))
         .elasticX(true)
+        .elasticY(true)
         .xAxisLabel("Month")
         .yAxisLabel("Spend on Training Per Month")
         .yAxis().ticks(15);
@@ -381,7 +382,7 @@ function showHoursByMonth (ndx){
     var minDate = date_dim.bottom(1)[0].date;
     var maxDate = date_dim.top(1)[0].date;
     dc.lineChart("#hours-per-month")
-        .width(1000)
+        .width(1200)
         .height(500)
         .margins({top: 10, right: 50, bottom: 30, left: 50})
         .dimension(date_dim)
@@ -393,6 +394,5 @@ function showHoursByMonth (ndx){
         .elasticX(true)
         .xAxisLabel("Month")
         .yAxisLabel("Hours Per Month")
-        .elasticY(true)
         .yAxis().ticks(15);
 }
