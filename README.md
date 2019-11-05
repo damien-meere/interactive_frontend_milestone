@@ -1,11 +1,11 @@
 # Damien Meere - BT Ireland
-Interactive Frontend Development Milestone Project - Code Institute
+### Interactive Frontend Development Milestone Project - Code Institute
 
 This project website will highlight my capability to employ the various tools illustrated throughout the Interactive frontend development section of the Code Institute programme.
 This project will present a dashboard of mock training data, presenting a visual representation of data within interactive charts. Ultimately, as will be discussed within the UX + User
 Story section, the goal is to make analysis and processing of training data easier to understand, and more actionable by upper management.
 
-### Table of Contents
+## Table of Contents
 
 - [Demo](#Demo)
 - [Database](#Database)
