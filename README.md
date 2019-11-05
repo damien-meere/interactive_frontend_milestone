@@ -70,16 +70,16 @@ design for the sidebar navigation - see [navigation_design.jpg](https://github.c
 ## Technologies
 1. HTML
 2. CSS
-3. Bootstrap (4.3.1)
-4. FontAwesome
+3. [Bootstrap](https://getbootstrap.com/) (4.3.1)
+4. [FontAwesome](https://fontawesome.com/)
 5. Google Font - [Raleway](https://fonts.google.com/specimen/Raleway)
 6. JQuery
-7. D3 - a JavaScript library for manipulating data, particularly to render our interactive charts and graphs
-8. DC - a JavaScript library for data visualization, here for plotting the charts
-9. Crossfilter
-10. Queue - an asynchronous helper library for JavaScript
-11. Intro.js (2.9.3) - Step-Bt-Step introductory tour through the dashboard for first time users.
-12. EmailJS - facilitates the sending of emails from the Contact Form
+7. [D3](https://d3js.org/) - a JavaScript library for manipulating data, particularly to render our interactive charts and graphs
+8. [DC](https://dc-js.github.io/dc.js/) - a JavaScript library for data visualization, here for plotting the charts
+9. [Crossfilter](https://square.github.io/crossfilter/)
+10. [Queue](https://cdnjs.com/libraries/queue-async) - an asynchronous helper library for JavaScript
+11. [Intro.js](https://introjs.com/) (2.9.3) - Step-Bt-Step introductory tour through the dashboard for first time users.
+12. [EMailJS](https://www.emailjs.com/) - facilitates the sending of emails from the Contact Form
 
 ## Site-Notes
 This site is a simple two page structure with one page to house the data visualisations in a [dashboard](https://damien-meere.github.io/interactive_frontend_milestone/).
@@ -140,6 +140,9 @@ collection portals to allow for the inputting of up to date data.
 
 In it's current form, the dashboard is exclusively for desktop consumption. In the next iteration of the project, I will be implementing mobile first principles,
 and building responsive charts that will accommodate for varying screen sizes.
+
+The next iteration of this project will also look to provide even more granular detail on the teams involved in training. The dataset will be expended to also include details
+of the specific teams undertaking training, and which teams are accounting for the most spent.
 
 ## Testing
 During initial building of the Dashboard, the requisite data was split across three separate datasets. Therefore some charts related to different datasets, and as such,
