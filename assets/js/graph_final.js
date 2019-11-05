@@ -324,6 +324,7 @@ function compositeHoursByType(ndx){
         .renderHorizontalGridLines(true)
 		.renderVerticalGridLines(true)
         .compose([
+            //each line chart is added to the composite and given it's own individual colour to set them apart
             dc.lineChart(compositeChart)
                 .colors('green')
                 .group(safetyHoursByMonth, 'Safety'),

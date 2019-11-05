@@ -81,17 +81,20 @@ design for the sidebar navigation - see [navigation_design.jpg](https://github.c
 9. Crossfilter
 10. Queue - an asynchronous helper library for JavaScript
 11. Intro.js (2.9.3) - Step-Bt-Step introductory tour through the dashboard for first time users.
+12. EmailJS - facilitates the sending of emails from the Contact Form
 
 ## Site-Notes
 This site is a simple two page structure with one page to house the data visualisations in a [dashboard](https://damien-meere.github.io/interactive_frontend_milestone/).
 The other page houses a [contact form](https://damien-meere.github.io/interactive_frontend_milestone/contact.html), where site users can submit any queries they might
-have pertaining to the data contained within the dashboard.
+have pertaining to the data contained within the dashboard. As regards the email service, as this demo site will be housed within GitHub pages for submission to the Code Institute
+This functionality in not available. GitHub pages are static, and as such do not allow the form 'POST' method. However, once housed within another server environment, this
+functionality will enable dashboard visitors to submit queries regarding the data visualised within the dashboard.
 
 I've implemented a sidebar navigation on this site to allow for further additions to the site, such as data collection portals, as discussed in the Future Features section.
 
 ## Current-Features
 The purpose of this dashboard, as outlined in the UX+User-Stories section, is to breakdown and visualise the training data for all training committed and finances spent
-on training throughout the last number of years. The following is description of year chart used and it's significance:
+on training throughout the last number of years. The following are descriptions of the charts used and their significance:
 
 1. Total Hours and Total Spend Number Displays
 ![Number Displays](assets/images/totals_number_disp.jpg)
@@ -126,6 +129,11 @@ to make more specific determinations about the training.
 
 An introductory tour utility has been implemented within the dashboard to guide first time users through the various sections of the dashboard, and provide a brief
 introduction to each chart type. [Intro.js](https://introjs.com/) is utilised to support this functionality.
+
+Within the Contact page, the [EMailJS](https://www.emailjs.com/) is employed to facilitate the sending of email requests from the Contact Form. However, as this demo site
+will be housed within GitHub pages for submission to the Code Institute, this functionality in not available. GitHub pages are static, and as such do not allow the form 'POST'
+method. However, once housed within another server environment, this functionality will be restored and enable visitors to submit queries regarding the data visualised
+within the dashboard.
 
 ## Future-Features
 In it's current form, the dashboard draws it's data from a static dataset - [data_consol.json](https://github.com/damien-meere/interactive_frontend_milestone/blob/master/assets/data/data_consol.json).
@@ -167,6 +175,9 @@ want to clone the repository. For more information you can review the [GitHub si
 ### Acknowledgements
 [Intro.js](https://introjs.com/) is an open-source utility the facilitates a step-by-step guide through a site. In this case, the utility is employed to guide first
 time users through the various charts, and provide a brief description of the chart context.
+
+[EMailJS](https://www.emailjs.com/) is an online service that facilitates the transmission of user-submitted information to a specified email account. Within this site, this service
+faciliates the transmission of user requests from the Contact page to a Gmail account.
 
 ### Content
 All data contained within this site is mocked up, so as to give a view of data visualisation. This dashboard will be presented internally within BT Ireland with the
