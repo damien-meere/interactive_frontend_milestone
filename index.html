@@ -71,7 +71,7 @@
                     <div class="card-header">
                         Select Year
                     </div>
-                    <div class="card-body">
+                    <div class="card-body text-center drop">
                     <h5 class="card-title">Filter Data to a particular Year</h5>
                         <!-- Card Content-->
                         <div id="year_selector" data-step="1" data-intro="Select a year to filter the data to the requisite year"></div>
@@ -81,7 +81,7 @@
                     <div class="card-header">
                         Select Training Type
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body text-center drop">
                     <h5 class="card-title">Filter the Data to a particular Training Type</h5>
                         <!-- Card Content-->
                         <div id="type_selector" data-step="2" data-intro="Select a training type to filter the data to the requisite type"></div>
@@ -125,7 +125,9 @@
                 <div class="col-sm-6">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Total Hours Training Completed by Year</h5>
+                            <h5 class="card-title">Total Hours Training Completed by Year
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This chart illustrates the total hours training that has been completed each year</p>
                             <div id="annualHours" data-step="6" data-intro="Displays the total training hours within a given year"></div>
 
@@ -135,7 +137,9 @@
                 <div class="col-sm-6">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Total Training Spend by Year</h5>
+                            <h5 class="card-title">Total Training Spend by Year
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This chart illustrates the total cost of all training (in Eur €) each year.</p>
                             <div id="annualSpend" data-step="7" data-intro="Displays the total training spend within a given year"></div>
                         </div>
@@ -147,7 +151,9 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Training Hours by Type Breakdown</h5>
+                            <h5 class="card-title">Training Hours by Type Breakdown
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This stacked bar chart illustrates the breakdown of hours completed by type.</p>
                             <div id="stackedHours" data-step="8" data-intro="Displays an annual breakdown of training hours by type"></div>
                         </div>
@@ -156,7 +162,9 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Training Spend by Type</h5>
+                            <h5 class="card-title">Training Spend by Type
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This stacked bar chart illustrates the breakdown of spend by type (€).</p>
                             <div id="stackedSpend" data-step="9" data-intro="Displays the total training spend within a given year"></div>
                         </div>
@@ -170,7 +178,9 @@
                 <div class="col-sm-4">
                     <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Type Breakdown</h5>
+                        <h5 class="card-title">Type Breakdown
+                            <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                        </h5>
                         <p class="card-text">This pie chart represents a split of hours per training type for a given time period. Click on a type to isolate the data.</p>
                         <div id="pieTest" data-step="10" data-intro="Displays a breakdown of hours by training typw within a given time period"></div>
                     </div>
@@ -179,7 +189,9 @@
                 <div class="col-sm-8">
                     <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Hours By Type Per Month</h5>
+                        <h5 class="card-title">Hours By Type Per Month
+                            <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                        </h5>
                         <p class="card-text">This chart represents the progression of hours completed for each training type per Month. Hang your mouse over
                         individual points to view the total hours value.</p>
                         <div id="composite-chart" data-step="11" data-intro="Displays hours commited to individual training type within a given time period"></div>
@@ -194,7 +206,9 @@
                 <div class="col-sm-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Total Hours Per Month</h5>
+                            <h5 class="card-title">Total Hours Per Month
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This chart presents a view of the total hours training committed per month. Hang your mouse over the various data points to view the values.</p>
                             <div id="hours-per-month" data-step="12" data-intro="Displays the total training hours per month"></div>
                         </div>
@@ -203,7 +217,9 @@
                 <div class="col-sm-12">
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Total Spend Per Month</h5>
+                            <h5 class="card-title">Total Spend Per Month
+                                <a class="btn btn-info btn-sm float-right" href="javascript:dc.filterAll();dc.redrawAll();" role="button">Reset Filters</a>
+                            </h5>
                             <p class="card-text">This chart presents a view of the total training spend per month. Hang your mouse over the various data points to view the values.</p>
                             <div id="spend-per-month" data-step="13" data-intro="Displays the total training spend per month"></div>
                         </div>

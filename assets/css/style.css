@@ -63,6 +63,10 @@ a:focus {
     font-size: 2.5rem!important;
 }
 
+.drop {
+    font-size: 1.4rem;
+}
+
 .card-body {
     display: inline-block;
     margin: 0 auto;
