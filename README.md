@@ -125,6 +125,9 @@ These two line charts present the total hours committed and the total spend over
 to view records, rather than just the full year. From here again, all the charts in the dashboard can be filtered down to a much more specific time, allowing the user
 to make more specific determinations about the training.
 
+Each chart area contains a 'Chart Reset' Button. On many screens, users will have to scroll down to view certain charts, to to avoid having to scroll to the top of the page to reset,
+each chart now has it's own reset button. THis enables users to quickly view the piece of information they wish to view, and quickly move on.
+
 An introductory tour utility has been implemented within the dashboard to guide first time users through the various sections of the dashboard, and provide a brief
 introduction to each chart type. [Intro.js](https://introjs.com/) is utilised to support this functionality.
 
