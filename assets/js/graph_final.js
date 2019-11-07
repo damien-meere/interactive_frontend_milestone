@@ -7,7 +7,7 @@ queue()
 function makeGraphs(error, trainingData) {
     var ndx = crossfilter(trainingData);
 
-    // Make sure the date is formatted int he correct format
+    // Make sure the date is formatted in the correct format
     var parseDate = d3.time.format("%d/%m/%Y").parse;
     trainingData.forEach(function(d){
         d.date = parseDate(d.date);
